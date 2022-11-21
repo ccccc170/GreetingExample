@@ -4,12 +4,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner userInputForInt = new Scanner(System.in);
+        Scanner userInputForString = new Scanner(System.in);
+        System.out.println("Do you want to recieve a greeting based on the time of day, or check to see what films you can see? Enter greeting or film");
+        String greetingOrFilm = userInputForString.nextLine().toLowerCase();
 
-        System.out.println("Please enter an int");
-        Scanner userInput = new Scanner(System.in);
-        int timeOfDay = userInput.nextInt();
+        if (greetingOrFilm.equals("greeting")) {
+            System.out.println("Please enter an int");
+            int timeOfDay = userInputForInt.nextInt();
 
-        System.out.println(greeting(timeOfDay));
+            System.out.println(greeting(timeOfDay));
+        } else {
+            FilmClassifications.enterAge();
+        }
     }
 
     public static String greeting(int timeOfDay) {
