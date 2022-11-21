@@ -10,8 +10,11 @@ public class Main {
         String greetingOrFilm = userInputForString.nextLine().toLowerCase();
 
         if (greetingOrFilm.equals("greeting")) {
-            System.out.println("Please enter an int");
-            int timeOfDay = userInputForInt.nextInt();
+            int timeOfDay = -1;
+            while (!(timeOfDay >= 0 && timeOfDay <= 23)) {
+                System.out.println("Please enter an int between 0 and 23 inclusive");
+                timeOfDay = userInputForInt.nextInt();
+            }
 
             System.out.println(greeting(timeOfDay));
         } else {
