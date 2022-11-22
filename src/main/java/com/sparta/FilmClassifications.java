@@ -27,7 +27,7 @@ public class FilmClassifications {
                 if (visitsSexShop.equals("yes")) {
                     System.out.println(availableClassifications(age, visitsSexShop, "no"));
                 } else {
-                    System.out.println("How about viewing a R18 film at a specially licensed cinema?");
+                    System.out.println("How about viewing the R18 film at a specially licensed cinema?");
                     String visitsSpeciallyLicensedCinema = userInputForString.nextLine().toLowerCase();
                     if (visitsSpeciallyLicensedCinema.equals("yes")) {
                         System.out.println(availableClassifications(age, "no", visitsSpeciallyLicensedCinema));
